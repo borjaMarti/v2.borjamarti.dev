@@ -1,0 +1,13 @@
+.ayo {
+  color: var(--teal-11);
+  background-color: var(--teal-3);
+  border-color: var(--teal-7);
+}
+
+.ayo:focus {
+  border-color: var(--teal-8);
+}
+
+.ayo:active {
+  background-color: var(--teal-5);
+}

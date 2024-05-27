@@ -1,0 +1,19 @@
+.svgContainer {
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg {
+  width: 100%;
+}
+
+.path {
+  fill: var(--teal-12);
+}
+
+.path--negative {
+  fill: var(--teal-1);
+}
