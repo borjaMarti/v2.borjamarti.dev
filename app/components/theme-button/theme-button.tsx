@@ -1,10 +1,10 @@
 "use client";
+import styles from "./theme-button.module.css";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import styles from "./switch-theme.module.css";
-import Tooltip from "./tooltip/tooltip";
+import { Tooltip } from "../tooltip";
 
-const SwitchTheme = () => {
+export const ThemeButton = () => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
 
@@ -13,7 +13,7 @@ const SwitchTheme = () => {
   }, []);
 
   if (!mounted) {
-    return null;
+    return <p>Eyoooo</p>;
   }
 
   const handleClick = () => {
@@ -32,5 +32,3 @@ const SwitchTheme = () => {
     </Tooltip>
   );
 };
-
-export default SwitchTheme;

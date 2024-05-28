@@ -1,4 +1,5 @@
 "use client";
+import styles from "./theme-icon.module.css";
 import {
   sunIn,
   moonIn,
@@ -20,13 +21,12 @@ import {
   ray6,
   ray7,
   ray8,
-} from "./paths";
-import styles from "./style.module.css";
-import SVGMorph from "./morphy";
+} from "./theme-icon-paths";
+import { MorphingPath } from "@/components/morphing-path";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 
-export default function Soon() {
+export const ThemeIcon = () => {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
 
@@ -38,59 +38,64 @@ export default function Soon() {
     return null;
   }
   return (
-    <div className={styles.svgContainer}>
-      <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg">
-        <SVGMorph
+    <div className={styles["svg-container"]}>
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 25 25"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <MorphingPath
           paths={[sunOut, moonOut]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[sunIn, moonIn]}
           classNames={styles["path--negative"]}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray1, star1]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray2, star2]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray3, star3]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray4, star4]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray5, star5]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray6, star6]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray7, star7]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
-        <SVGMorph
+        <MorphingPath
           paths={[ray8, star8]}
           classNames={styles.path}
-          theme={theme}
+          result={theme === "light" ? 0 : 1}
         />
       </svg>
     </div>
   );
-}
+};

@@ -1,5 +1,5 @@
-import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import styles from "./tooltip.module.css";
+import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
 interface TooltipInterface {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface TooltipInterface {
   theme: "light" | "dark";
 }
 
-const Tooltip = ({ children, content, theme }: TooltipInterface) => {
+export const Tooltip = ({ children, content, theme }: TooltipInterface) => {
   return (
     <TooltipPrimitive.Provider delayDuration={400}>
       <TooltipPrimitive.Root>
@@ -25,5 +25,3 @@ const Tooltip = ({ children, content, theme }: TooltipInterface) => {
     </TooltipPrimitive.Provider>
   );
 };
-
-export default Tooltip;

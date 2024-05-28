@@ -1,13 +1,7 @@
-.svgContainer {
-  width: 15vw;
-  height: 15vw;
+.svg-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.svg {
-  width: 100%;
 }
 
 .path {
