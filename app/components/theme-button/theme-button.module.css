@@ -1,13 +1,38 @@
-.ayo {
-  color: var(--teal-11);
-  background-color: var(--teal-3);
-  border-color: var(--teal-7);
+.theme-button {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--border-radius, 0.5rem);
+  transition:
+    box-shadow 0.3s,
+    border-color 0.3s,
+    background 0.3s;
+  background: var(--background, var(--gray-3));
+  border: var(--border-width, 1px) solid var(--border-color, transparent);
+  box-shadow: var(--box-shadow, none);
 }
 
-.ayo:focus {
-  border-color: var(--teal-8);
+.theme-button:focus-visible,
+.theme-button:hover {
+  --background: var();
+  --border-radius: 0.625rem;
+  --border-color: var(--teal-8);
+  --button-background-scale: 0.9;
+  --border-width: 2px;
+  --box-shadow: 0 2px 40px -4px var(--teal-a4);
+  outline: none;
 }
 
-.ayo:active {
-  background-color: var(--teal-5);
+.path {
+  fill: var(--gray-12);
+  transition: fill 0.3s ease-in-out;
+}
+
+.theme-button:focus-visible .path,
+.theme-button:hover .path {
+  fill: var(--teal-11);
+}
+
+.path--negative {
+  fill: var(--gray-3);
 }

@@ -3,6 +3,8 @@ import styles from "./theme-button.module.css";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { Tooltip } from "../tooltip";
+import { ThemeIcon } from "./theme-icon";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export const ThemeButton = () => {
   const [mounted, setMounted] = useState(false);
@@ -26,9 +28,17 @@ export const ThemeButton = () => {
       content={theme === "light" ? "Activate dark mode" : "Activate light mode"}
       theme={theme === "light" ? "dark" : "light"}
     >
-      <button onClick={handleClick} className={styles.ayo}>
-        {theme === "light" ? "Light" : "Dark"}
-      </button>
+      <div className={styles.div}>
+        <button onClick={handleClick} className={styles["theme-button"]}>
+          <ThemeIcon
+            classNames={{
+              path: styles.path,
+              "path--negative": styles["path--negative"],
+            }}
+          />
+          <VisuallyHidden>{`Switch to ${theme === "light" ? "dark mode." : "light mode"}`}</VisuallyHidden>
+        </button>
+      </div>
     </Tooltip>
   );
 };
