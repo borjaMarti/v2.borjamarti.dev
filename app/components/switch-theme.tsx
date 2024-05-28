@@ -2,6 +2,7 @@
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import styles from "./switch-theme.module.css";
+import Tooltip from "./tooltip/tooltip";
 
 const SwitchTheme = () => {
   const [mounted, setMounted] = useState(false);
@@ -21,9 +22,14 @@ const SwitchTheme = () => {
   };
 
   return (
-    <button onClick={handleClick} className={styles.ayo}>
-      {theme === "light" ? "Light" : "Dark"}
-    </button>
+    <Tooltip
+      content={theme === "light" ? "Activate dark mode" : "Activate light mode"}
+      theme={theme === "light" ? "dark" : "light"}
+    >
+      <button onClick={handleClick} className={styles.ayo}>
+        {theme === "light" ? "Light" : "Dark"}
+      </button>
+    </Tooltip>
   );
 };
 
