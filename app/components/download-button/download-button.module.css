@@ -1,6 +1,7 @@
 .download-link {
   outline: none;
   text-decoration: none;
+  display: inline-block;
 }
 
 .download-button {
