@@ -1,5 +1,5 @@
 .eyo {
-  color: var(--teal-12);
+  color: var(--gray-12);
   transition: 0.5s;
 }
 
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: var(--teal-1);
+  background: var(--gray-1);
   transition: 0.5s;
   gap: 200px;
 }

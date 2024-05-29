@@ -1,13 +1,13 @@
+"use client";
 import styles from "./tooltip.module.css";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 
 interface TooltipInterface {
   children: React.ReactNode;
   content: string;
-  theme: "light" | "dark";
 }
 
-export const Tooltip = ({ children, content, theme }: TooltipInterface) => {
+export const Tooltip = ({ children, content }: TooltipInterface) => {
   return (
     <TooltipPrimitive.Provider delayDuration={400}>
       <TooltipPrimitive.Root>
@@ -15,7 +15,7 @@ export const Tooltip = ({ children, content, theme }: TooltipInterface) => {
         <TooltipPrimitive.Portal>
           <TooltipPrimitive.Content
             side="bottom"
-            className={`${styles["tooltip-content"]} ${theme}`}
+            className={styles["tooltip-content"]}
             sideOffset={10}
           >
             {content}

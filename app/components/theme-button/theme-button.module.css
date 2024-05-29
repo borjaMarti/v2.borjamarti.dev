@@ -7,17 +7,15 @@
     box-shadow 0.3s,
     border-color 0.3s,
     background 0.3s;
-  background: var(--background, var(--gray-3));
+  background: var(--gray-3);
   border: var(--border-width, 1px) solid var(--border-color, transparent);
   box-shadow: var(--box-shadow, none);
 }
 
 .theme-button:focus-visible,
 .theme-button:hover {
-  --background: var();
   --border-radius: 0.625rem;
   --border-color: var(--teal-8);
-  --button-background-scale: 0.9;
   --border-width: 2px;
   --box-shadow: 0 2px 40px -4px var(--teal-a4);
   outline: none;
@@ -35,4 +33,20 @@
 
 .path--negative {
   fill: var(--gray-3);
+}
+
+.theme-button__skeleton {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  animation: rt-skeleton-pulse 1000ms infinite alternate-reverse;
+}
+
+@keyframes rt-skeleton-pulse {
+  from {
+    background-color: var(--gray-a3);
+  }
+  to {
+    background-color: var(--gray-a4);
+  }
 }

@@ -4,6 +4,23 @@
 @import "@radix-ui/colors/teal-dark-alpha.css";
 @import "@radix-ui/colors/gray.css";
 @import "@radix-ui/colors/gray-dark.css";
+@import "@radix-ui/colors/gray-alpha.css";
+@import "@radix-ui/colors/gray-dark-alpha.css";
+
+/* Only for the tooltip */
+
+:root,
+.light,
+.light-theme {
+  --inverted-gray-5: #313131;
+  --inverted-gray-12: #eeeeee;
+}
+
+.dark,
+.dark-theme {
+  --inverted-gray-5: #e0e0e0;
+  --inverted-gray-12: #202020;
+}
 
 /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 

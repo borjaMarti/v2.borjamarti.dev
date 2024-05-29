@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  height: 7.5rem;
+  background-color: var(--gray-a2);
+  backdrop-filter: blur(0.5rem);
+  transition: background-color 0.5s;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 4rem !important;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 55rem;
+  padding: 0 1rem 0 1rem;
+}
