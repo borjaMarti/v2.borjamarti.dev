@@ -26,7 +26,6 @@ export const Hero = () => {
               <a
                 href="https://github.com/borjaMarti"
                 className={styles.link}
-                title="GitHub"
                 target="_blank"
                 aria-label="Go to my GitHub profile"
               >
@@ -39,7 +38,6 @@ export const Hero = () => {
               <a
                 href="mailto:borjamarti@outlook.com"
                 className={styles.link}
-                title="borjamarti@outlook.com"
                 aria-label="Send an email to my address"
               >
                 <EnvelopeClosedIcon className={styles.icon} />
@@ -51,7 +49,6 @@ export const Hero = () => {
               <a
                 href="https://www.linkedin.com/in/bormarcal/"
                 className={styles.link}
-                title="LinkedIn"
                 target="_blank"
                 aria-label="Go to my LinkedIn profile"
               >
