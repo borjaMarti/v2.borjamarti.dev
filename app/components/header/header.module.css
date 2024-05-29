@@ -26,3 +26,14 @@
   max-width: 55rem;
   padding: 0 1rem 0 1rem;
 }
+
+.header__link {
+  outline: none;
+  border-radius: 0.5rem;
+  transition: border-color 0.3s;
+  border: 2px solid var(--border-color, transparent);
+}
+
+.header__link:focus-visible {
+  --border-color: var(--teal-8);
+}

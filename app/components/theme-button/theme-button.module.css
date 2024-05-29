@@ -6,10 +6,12 @@
   transition:
     box-shadow 0.3s,
     border-color 0.3s,
-    background 0.3s;
+    background 0.3s,
+    transform 0.3s;
   background: var(--gray-3);
   border: var(--border-width, 1px) solid var(--border-color, transparent);
   box-shadow: var(--box-shadow, none);
+  transform: scale(var(--transform, 1)) translateZ(0);
 }
 
 .theme-button:focus-visible,
@@ -19,6 +21,10 @@
   --border-width: 2px;
   --box-shadow: 0 2px 40px -4px var(--teal-a4);
   outline: none;
+}
+
+.theme-button:active {
+  --transform: 0.94;
 }
 
 .path {

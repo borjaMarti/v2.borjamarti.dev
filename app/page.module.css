@@ -1,21 +1,21 @@
-.eyo {
-  color: var(--gray-12);
-  transition: 0.5s;
-}
-
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   background: var(--gray-1);
   transition: 0.5s;
-  gap: 200px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  min-height: 100vh;
 }
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 200px;
+@media (min-width: 640px) {
+  .main {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }

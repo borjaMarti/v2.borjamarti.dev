@@ -35,7 +35,11 @@ export const Header = () => {
     >
       <div className={styles["header__container"]}>
         <Tooltip content="Home">
-          <Link href="/" aria-label="Navigate to Home">
+          <Link
+            href="/"
+            aria-label="Navigate to Home"
+            className={styles["header__link"]}
+          >
             <BMLogo />
           </Link>
         </Tooltip>
