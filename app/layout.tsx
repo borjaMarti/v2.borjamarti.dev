@@ -6,7 +6,7 @@ import { ThemeProvider } from "next-themes";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Borja Martí - Full-Stack Developer",
+  title: "Borja Martí | Full-Stack Developer",
   description: "Borja Martí's portfolio and contact info",
   keywords: [
     "Web Developer",

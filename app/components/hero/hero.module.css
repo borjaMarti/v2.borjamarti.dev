@@ -36,9 +36,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1.875rem;
-  flex-grow: 1;
-  flex-basis: 0;
+  margin-bottom: 3rem;
 }
 
 .portrait {
