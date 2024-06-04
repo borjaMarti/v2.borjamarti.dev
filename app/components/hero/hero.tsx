@@ -71,7 +71,7 @@ export const Hero = () => {
           programming! ⚡
         </p>
         <DownloadButton
-          link={"/Martí Calvo, Borja - CV.pdf"}
+          link={"/borja-marti-cv.pdf"}
           tag={"Resume.pdf"}
           label={"Download my CV"}
         />
