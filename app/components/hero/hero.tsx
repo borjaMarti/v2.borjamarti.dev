@@ -47,7 +47,7 @@ export const Hero = () => {
           <li>
             <Tooltip content={"LinkedIn Profile"}>
               <a
-                href="https://www.linkedin.com/in/bormarcal/"
+                href="https://www.linkedin.com/in/borjamarticalvo/"
                 className={styles.link}
                 target="_blank"
                 aria-label="Go to my LinkedIn profile"
