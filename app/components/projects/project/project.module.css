@@ -1,0 +1,18 @@
+.link {
+  color: var(--teal-9);
+  transition: color 0.3s;
+  outline: none;
+}
+
+.link:focus-visible,
+.link:hover {
+  color: var(--grey-10);
+}
+
+.project-links {
+  padding: 0;
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 0;
+  list-style: none;
+}
