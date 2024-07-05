@@ -7,6 +7,7 @@ import {
 } from "@radix-ui/react-icons";
 import { Tooltip } from "../tooltip";
 import { DownloadButton } from "../download-button";
+import { LinkButton } from "../link-button";
 
 export const Hero = () => {
   return (
@@ -70,11 +71,14 @@ export const Hero = () => {
           build a study application for my students and got captivated by
           programming! ⚡
         </p>
-        <DownloadButton
-          link={"/borja-marti-cv.pdf"}
-          tag={"Resume.pdf"}
-          label={"Download my CV"}
-        />
+        <div className={styles.info__links}>
+          <DownloadButton
+            link={"/borja-marti-cv.pdf"}
+            tag={"Resume.pdf"}
+            label={"Download my CV"}
+          />
+          <LinkButton link="#work" tag="Work" />
+        </div>
       </section>
     </section>
   );

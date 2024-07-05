@@ -1,0 +1,35 @@
+.link {
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.link-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
+  background: var(--teal-3);
+  box-shadow: var(--box-shadow, none);
+  transform: scale(var(--transform, 1)) translateZ(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.675rem 1rem;
+  color: var(--teal-11);
+  font-size: 1rem;
+  min-height: 100%;
+}
+
+.link-button:focus-visible,
+.link-button:hover {
+  --box-shadow: 0 2px 30px -4px var(--teal-a9);
+  outline: none;
+}
+
+.link-button:active {
+  --transform: 0.94;
+}

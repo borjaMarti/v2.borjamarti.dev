@@ -121,3 +121,8 @@
     margin-bottom: 2rem;
   }
 }
+
+.info__links {
+  display: flex;
+  gap: 1.25rem;
+}

@@ -3,12 +3,13 @@ import styles from "./project.module.css";
 import Image from "next/image";
 import { GitHubLogoIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
-interface ProjectProps {
+export interface ProjectProps {
   imgSrc: string;
   title: string;
   summary: string;
-  repoLink: string;
+  repoLink?: string;
   demoLink: string;
+  backgroundColor: string;
 }
 
 export const Project = ({
@@ -17,28 +18,39 @@ export const Project = ({
   summary,
   repoLink,
   demoLink,
+  backgroundColor,
 }: ProjectProps) => {
   return (
     <article className={styles.project}>
-      <div className={styles["image-container"]}>
-        <Image src={imgSrc} alt={`${title} `} className={styles.image} />
+      <div className={`${styles["image-container"]} ${backgroundColor}`}>
+        <Image
+          src={imgSrc}
+          alt={`${title} `}
+          className={styles.image}
+          width={880}
+          height={500}
+        />
       </div>
       <div className={styles.info}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.summary}>{summary}</p>
         <ul className={styles["project-links"]}>
-          <li>
-            <Tooltip content={"Project Repo"}>
-              <a
-                href={repoLink}
-                className={styles.link}
-                target="_blank"
-                aria-label="Go to my GitHub profile"
-              >
-                <GitHubLogoIcon className={styles.icon} />
-              </a>
-            </Tooltip>
-          </li>
+          {repoLink ? (
+            <li>
+              <Tooltip content={"Project Repo"}>
+                <a
+                  href={repoLink}
+                  className={styles.link}
+                  target="_blank"
+                  aria-label="Go to my GitHub profile"
+                >
+                  <GitHubLogoIcon className={styles.icon} />
+                </a>
+              </Tooltip>
+            </li>
+          ) : (
+            ""
+          )}
           <li>
             <Tooltip content={"Live Site"}>
               <a

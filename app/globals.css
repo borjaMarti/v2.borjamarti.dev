@@ -14,6 +14,7 @@
 .light-theme {
   --inverted-gray-5: #313131;
   --inverted-gray-12: #eeeeee;
+  scroll-behavior: smooth;
 }
 
 .dark,

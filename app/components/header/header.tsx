@@ -13,7 +13,7 @@ const headerVariants = {
     transition: { ease: "easeInOut", duration: 0.3 },
   },
   collapsed: {
-    height: 60,
+    height: 80,
     transition: { ease: "easeInOut", duration: 0.3 },
   },
 };
