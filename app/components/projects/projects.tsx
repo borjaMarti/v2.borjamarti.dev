@@ -15,7 +15,7 @@ const projectData: ProjectProps[] = [
     imgSrc: "/project-screenshots/despiensa.png",
     title: "Despiensa",
     summary:
-      "A smart shopping list app that learns its users' buying habits to remind them what they need to buy on their next trip to the store.",
+      "A smart shopping list app that learns its users' buying habits to remind them what they need to restock on their next trip to the store.",
     repoLink: "https://github.com/the-collab-lab/tcl-71-smart-shopping-list",
     demoLink: "https://despiensa.site",
     backgroundColor: styles["project-background--lilac"],
@@ -24,7 +24,7 @@ const projectData: ProjectProps[] = [
     imgSrc: "/project-screenshots/pokelist.png",
     title: "PokéList",
     summary:
-      "Technical assignment showcasing local and async state management; built with TypeScript, React, TanStack Router, Tanstack Query, Zustand, and GraphQL.",
+      "Technical assignment showcasing API consumption and local and async state management; built with TypeScript, React, React Query, Zustand, and GraphQL.",
     repoLink: "https://github.com/borjamarti/poke-list",
     demoLink: "https://poke-list-beta.vercel.app/",
     backgroundColor: styles["project-background--pale"],
@@ -33,7 +33,7 @@ const projectData: ProjectProps[] = [
     imgSrc: "/project-screenshots/baloo.png",
     title: "Baloo Animación",
     summary:
-      "Client website designed and built for event planning business prioritizing performance, accessibility, and SEO optimization.",
+      "CMS-based client website for event planning business designed and built prioritizing performance, accessibility, and SEO optimization.",
     demoLink: "https://balooanimacion.es",
     backgroundColor: styles["project-background--blue"],
   },
