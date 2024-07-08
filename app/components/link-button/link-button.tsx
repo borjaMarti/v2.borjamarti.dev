@@ -6,7 +6,7 @@ interface LinkButtonProps {
   tag: string;
   label?: string;
   target?: string;
-  icon?: React.ComponentType<IconProps>;
+  Icon?: React.ComponentType<IconProps>;
   type: "bold" | "subtle" | "gray";
 }
 
@@ -15,7 +15,7 @@ export const LinkButton = ({
   tag,
   label,
   target,
-  icon: Icon,
+  Icon,
   type,
 }: LinkButtonProps) => {
   return (

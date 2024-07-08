@@ -77,7 +77,7 @@ export const Hero = () => {
             tag="Resume.pdf"
             label="Download my CV"
             target="_blank"
-            icon={DownloadIcon}
+            Icon={DownloadIcon}
             type="bold"
           />
           <LinkButton link="#work" tag="Work" type="subtle" />

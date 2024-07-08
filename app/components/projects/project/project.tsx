@@ -43,7 +43,7 @@ export const Project = ({
                 tag="Project Repo"
                 label={`Link to ${title}'s repository.`}
                 target="_blank"
-                icon={GitHubLogoIcon}
+                Icon={GitHubLogoIcon}
                 type="gray"
               />
             </li>
@@ -56,7 +56,7 @@ export const Project = ({
               tag="Live Site"
               label={`Link to ${title}'s live site.`}
               target="_blank"
-              icon={ExternalLinkIcon}
+              Icon={ExternalLinkIcon}
               type="gray"
             />
           </li>
