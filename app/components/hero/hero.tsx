@@ -6,7 +6,7 @@ import {
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
 import { Tooltip } from "../tooltip";
-import { DownloadButton } from "../download-button";
+import { DownloadIcon } from "@radix-ui/react-icons";
 import { LinkButton } from "../link-button";
 
 export const Hero = () => {
@@ -72,12 +72,15 @@ export const Hero = () => {
           programming! ⚡
         </p>
         <div className={styles.info__links}>
-          <DownloadButton
-            link={"/borja-marti-cv.pdf"}
-            tag={"Resume.pdf"}
-            label={"Download my CV"}
+          <LinkButton
+            link="/borja-marti-cv.pdf"
+            tag="Resume.pdf"
+            label="Download my CV"
+            target="_blank"
+            icon={DownloadIcon}
+            type="bold"
           />
-          <LinkButton link="#work" tag="Work" />
+          <LinkButton link="#work" tag="Work" type="subtle" />
         </div>
       </section>
     </section>

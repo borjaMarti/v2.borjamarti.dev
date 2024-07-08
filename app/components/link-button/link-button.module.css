@@ -1,17 +1,12 @@
 .link {
   outline: none;
   text-decoration: none;
-  display: inline-block;
-}
-
-.link-button {
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
   transition:
     box-shadow 0.3s,
     transform 0.3s;
-  background: var(--teal-3);
   box-shadow: var(--box-shadow, none);
   transform: scale(var(--transform, 1)) translateZ(0);
   display: flex;
@@ -19,17 +14,43 @@
   align-items: center;
   gap: 1rem;
   padding: 0.675rem 1rem;
-  color: var(--teal-11);
   font-size: 1rem;
-  min-height: 100%;
 }
 
-.link-button:focus-visible,
-.link-button:hover {
+.link:active {
+  --transform: 0.94;
+}
+
+.link--bold {
+  background: var(--teal-9);
+  color: white;
+}
+
+.link--subtle {
+  background: var(--teal-3);
+  color: var(--teal-11);
+}
+
+.link--bold:focus-visible,
+.link--bold:hover,
+.link--subtle:focus-visible,
+.link--subtle:hover {
   --box-shadow: 0 2px 30px -4px var(--teal-a9);
   outline: none;
 }
 
-.link-button:active {
-  --transform: 0.94;
+.link--gray {
+  background: var(--gray-3);
+  color: var(--gray-12);
+}
+
+.link--gray:focus-visible,
+.link--gray:hover {
+  --box-shadow: 0 2px 30px -4px var(--gray-a9);
+  outline: none;
+}
+
+.icon {
+  width: 1.375rem;
+  height: 1.375rem;
 }

@@ -1,6 +1,7 @@
 import { Tooltip } from "@/components/tooltip";
 import styles from "./project.module.css";
 import Image from "next/image";
+import { LinkButton } from "@/components/link-button";
 import { GitHubLogoIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export interface ProjectProps {
@@ -37,31 +38,27 @@ export const Project = ({
         <ul className={styles["project-links"]}>
           {repoLink ? (
             <li>
-              <Tooltip content={"Project Repo"}>
-                <a
-                  href={repoLink}
-                  className={styles.link}
-                  target="_blank"
-                  aria-label="Go to my GitHub profile"
-                >
-                  <GitHubLogoIcon className={styles.icon} />
-                </a>
-              </Tooltip>
+              <LinkButton
+                link={repoLink}
+                tag="Project Repo"
+                label={`Link to ${title}'s repository.`}
+                target="_blank"
+                icon={GitHubLogoIcon}
+                type="gray"
+              />
             </li>
           ) : (
             ""
           )}
           <li>
-            <Tooltip content={"Live Site"}>
-              <a
-                href={demoLink}
-                className={styles.link}
-                target="_blank"
-                aria-label="Go to my GitHub profile"
-              >
-                <ExternalLinkIcon className={styles.icon} />
-              </a>
-            </Tooltip>
+            <LinkButton
+              link={demoLink}
+              tag="Live Site"
+              label={`Link to ${title}'s live site.`}
+              target="_blank"
+              icon={ExternalLinkIcon}
+              type="gray"
+            />
           </li>
         </ul>
       </div>
