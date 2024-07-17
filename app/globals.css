@@ -23,6 +23,12 @@
   --inverted-gray-12: #202020;
 }
 
+/* Correct html background */
+
+html {
+  background-color: var(--gray-1);
+}
+
 /*! modern-normalize v2.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /*
